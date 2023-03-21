@@ -2,13 +2,32 @@
 
 //mobile menu start 
 $(".mobile-btn").click(function(){
-    $(".responsive-menu").toggleClass("active");
-    $(".blank-div").toggleClass("active");    
-  });
+  $(".responsive-menu").toggleClass("active");
+  $(".blank-div").toggleClass("active");    
+});
 $(".blank-div").click(function(){
-    $(".responsive-menu").removeClass("active");
-  });
+  $(".responsive-menu").removeClass("active");
+  $(this).removeClass("active")
+});
 //mobile menu end
+
+// 
+document.querySelectorAll(".menu li a").forEach((link) => {
+  if (link.href === window.location.href) {
+      link.classList.add("menu-active");
+      link.setAttribute("aria-current", "page");
+  }
+});
+// document.querySelectorAll(".menu li").forEach((ele) =>
+//   ele.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     document
+//       .querySelectorAll(".menu li")
+//       .forEach((ele) => ele.classList.remove("menu-active"));
+//     this.classList.add("menu-active")
+//   })
+// );
+
 
 
 // hero slider active 
@@ -54,8 +73,10 @@ $('.testimoni-wrapper').slick({
 $('.brand-active').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1000,
   arrows: false,
-  dots: false,
+  dots: true,
   responsive: [
     {
       breakpoint: 1024,

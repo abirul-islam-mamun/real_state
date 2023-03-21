@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    @media (max-width: 410px) {
+        flex-direction: column;        
+    }
     .nav-item {
         .nav-link {           
             margin-left: 35px;
@@ -14,8 +17,8 @@
             outline: none;
             border: none;
             background: transparent;
-            @media (max-width: 768px) {
-                margin-left: 20px;
+            @media (max-width: 991px) {
+                margin-left: 10px;
             }
             &.active{
                 border-bottom: 3px solid $theme-color;

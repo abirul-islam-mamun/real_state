@@ -139,6 +139,9 @@
             font-size: 17px;
             line-height: 28px;
             transition: .3s;
+            &.menu-active {
+                color: $theme-color;
+            }
             @media (max-width: 1200px) {
                 font-size: 15px;
             }
@@ -159,7 +162,7 @@
         left: 20px;
         z-index: 111;
         padding: 0 20px;
-        top: 100%;
+        top: 142%;
         background: $white;
         width: 100%;
         transition: all .4s ease;
@@ -168,6 +171,9 @@
         transform: scaleY(0);
         transform-origin: top;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        @media (max-width: 491px) {
+            top: 133%;
+        }
         &.active {
             visibility: visible;
             opacity: 1;
@@ -180,13 +186,13 @@
                 margin: 5px 0;
                 text-align: left;
                 a {
-                    color: $primary-theme;
+                    color: $black;
                 }
                 .submenu{
                     li {
                         padding-bottom: 0;
                         a {
-                            color: $primary-theme;
+                            color: $black;
                         }
                     }
                 }
